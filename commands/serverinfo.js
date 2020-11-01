@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 
     var embed = new discord.MessageEmbed()
         .setColor("#0070fa")
-        .setThumbnail(`${message.guild.iconURL({ size: 4096 })}`)
+        .setThumbnail(`${message.guild.iconURL({ size: 1024 })}`)
         .setTitle(`${message.guild.name}`)
         .addField("ID:", `${message.guild.id}`)
         .addField("Eigenaar:", `${message.guild.owner.user.tag}`, true)
