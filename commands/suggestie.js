@@ -10,13 +10,13 @@ module.exports.run = async (Client, message, args) => {
 
     let suggestie = args.join(" ").slice(10);
 
-    var suggestieKanaal = message.member.guild.channels.cache.get("769303214188396584");
+    var suggestieKanaal = message.member.guild.channels.cache.get("758349088588300293");
 
     if (!suggestieKanaal) return message.channel.send("Kan de suggestie channel niet vinden.")
 
 
     const embed = new discord.MessageEmbed()
-        .setDescription(`${message.author.username} ${message.user.displayAvatarURL({size: 500})}`)
+        .setDescription(`${message.author.username}`)
         .setColor("#15214d")
         .addField("Suggestie", suggestie)
 
