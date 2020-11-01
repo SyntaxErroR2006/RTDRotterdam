@@ -7,6 +7,8 @@ module.exports.run = async (client, message, args) => {
     var userName = message.author.username;
     var userDiscriminator = message.author.discriminator;
 
+    var channel = createdChannel;
+
     var ticketBestaat = false;
 
     message.guild.channels.cache.forEach(channel => {
@@ -25,8 +27,7 @@ module.exports.run = async (client, message, args) => {
     if (ticketBestaat) return;
 
     var embed = new discord.MessageEmbed()
-        .setTitle("Hallo! " + message.author.username)
-        .setDescription("Je ticket wordt aangemaakt");
+        .setDescription(`✅ Je ticket wordt aangemaakt -> ${channel}`);
 
     message.channel.send(embed);
 
