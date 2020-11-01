@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
 
     message.guild.channels.cache.forEach(channel => {
 
-        if (channel.name == userName.toLowerCase() + "-" + userDiscriminator) {
+        if (channel.name == userName.toLowerCase() + "-" + "ticket") {
             ticketBestaat = true;
 
             message.reply("Je hebt al een ticket aangemaakt!");
@@ -64,7 +64,7 @@ module.exports.run = async (client, message, args) => {
 
                     var embedParent = new discord.MessageEmbed()
                         .setTitle(`Hallo! ${message.author.username}`)
-                        .setDescription(`We willen graag direct je klachten/vragen horen, zodat een staff lid direct kan reageren en helpen! \n **Onderwerp** \n ${args}`);
+                        .setDescription(`We willen graag direct je klachten/vragen horen, zodat een staff lid direct kan reageren en helpen! \n **Onderwerp** \n ${args.join(" ").slice(4)}`);
 
                     settedParent.send(embedParent);
 
