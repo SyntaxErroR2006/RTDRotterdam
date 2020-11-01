@@ -40,7 +40,7 @@ module.exports.run = async (client, message, args) => {
                         VIEW_CHANNEL: false
                     });
 
-                    settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '🛡️| Support team'), {
+                    settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === 'Support team'), {
                         CREATE_INSTANT_INVITE: false,
                         READ_MESSAGES: true,
                         SEND_MESSAGES: true,
