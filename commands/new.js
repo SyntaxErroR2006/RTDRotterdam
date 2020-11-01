@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
     var userName = message.author.username;
     var userDiscriminator = message.author.discriminator;
 
-    var channel = message.guild.channels(userName.toLowerCase() + "-" + "ticket", { type: "text" });
+    var channel = message.guild.cache.channels(userName.toLowerCase() + "-" + "ticket", { type: "text" });
 
     var ticketBestaat = false;
 
